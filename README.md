@@ -1,0 +1,2 @@
+# LightApi
+Simple NestJS backend.
