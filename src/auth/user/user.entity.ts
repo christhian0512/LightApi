@@ -7,16 +7,22 @@ export class Users {
     @PrimaryGeneratedColumn()
    id: number
 
-   @Column()
+   @Column({
+    unique: true
+    })
    username: string
 
    @Column()
    password: string
 
-   @Column()
+   @Column({
+    nullable: true
+    })
    email: string
 
-   @Column()
+   @Column({
+    nullable: true
+    })
    note: string
 
 }

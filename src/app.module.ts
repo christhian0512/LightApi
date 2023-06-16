@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 
+//dependencies and sql settings.
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'sqlite',
