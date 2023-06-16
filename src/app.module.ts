@@ -2,7 +2,9 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module';
 
+//dependencies and sql settings.
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: 'sqlite',
@@ -11,7 +13,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     synchronize: true,    
   }
 
-  )],
+  ), AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
